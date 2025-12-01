@@ -16,7 +16,7 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 // MongoDB connection
 mongoose
   .connect(
-    "mongodb+srv://artembasko:0pfndvbze@cluster0.ybmff6z.mongodb.net/comp3123_assignment1?retryWrites=true&w=majority&appName=Cluster0"
+    "mongodb://artembasko:0pfndvbze@cluster0-shard-00-00.ybmff6z.mongodb.net:27017,cluster0-shard-00-01.ybmff6z.mongodb.net:27017,cluster0-shard-00-02.ybmff6z.mongodb.net:27017/comp3123_assignment1?ssl=true&replicaSet=atlas-ybmff6z-shard-0&authSource=admin&retryWrites=true&w=majority"
   )
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("MongoDB connection error:", err));
