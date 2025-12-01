@@ -16,7 +16,7 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 // MongoDB connection
 mongoose
   .connect(
-    "mongodb+srv://artembasko:<db_password>@cluster0.ybmff6z.mongodb.net/?appName=Cluster0"
+    "mongodb+srv://artembasko:0pfndvbze@cluster0.ybmff6z.mongodb.net/?appName=Cluster0"
   )
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("MongoDB connection error:", err));
